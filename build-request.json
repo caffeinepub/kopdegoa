@@ -1,41 +1,38 @@
 {
   "kind": "build_request",
-  "title": "Remove outer box/square background from logo image",
+  "title": "Preserve current logo appearance unchanged",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Update all logo usages across the app (Header, Hero, Footer) so the logo is displayed without any surrounding dark square/box background — the circular badge should appear directly on whatever background sits behind it, with no rectangular container or box shape visible.",
+      "text": "Keep the KopdeGoa logo exactly as it currently appears in the Header, Hero, and Footer components — do not alter its size, styling, transparency, positioning, or any other visual properties.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "remove the box from the logo"
+          "keep the logo the same"
         ]
       },
       "acceptanceCriteria": [
-        "The dark square/rectangular box that frames the circular KopdeGoa logo badge is no longer visible anywhere in the app.",
-        "The circular logo badge (beer mug with 'KOP DE GOA' text) renders cleanly against the Header, Hero, and Footer backgrounds.",
-        "No white or dark rectangular bounding box appears around the logo in any section or screen size.",
-        "The logo retains its circular badge shape with the red border, yellow glow, and beer mug illustration intact."
+        "The logo in the Header component renders identically to the current approved state.",
+        "The logo in the Hero component renders identically to the current approved state.",
+        "The logo in the Footer component renders identically to the current approved state.",
+        "No changes are made to logo size, opacity, padding, margin, background, or wrapper elements."
       ]
     }
   ],
   "constraints": [
-    "Do not alter the circular badge design, colors, or illustration inside the logo.",
-    "Do not modify any immutable frontend paths."
+    "Do not modify any logo-related styles, classes, or wrapper elements in Header.tsx, Hero.tsx, or Footer.tsx.",
+    "Do not replace or alter the logo image asset."
   ],
   "nonGoals": [
-    "Redesigning the logo shape or brand identity.",
-    "Changing logo sizing or placement in the layout.",
-    "Any backend changes."
+    "Changing any other visual or functional aspect of the site.",
+    "Modifying backend logic."
   ],
   "imageRequirements": {
-    "required": [
-      "Circular badge logo with 'KOP DE GOA' text arc at the top, a yellow/golden sun glow background, a dark navy blue beer mug with foam in the center, a red outer ring border, and a white inner ring — the entire image must have a fully transparent background with no square or rectangular box (kopdeGoa-logo.dim_300x300.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }

@@ -45,7 +45,7 @@ export function Header() {
             className="flex items-center gap-3 group"
           >
             <img
-              src="/assets/generated/kopdeGoa-logo.dim_300x300.png"
+              src="/assets/generated/kopde-goa-logo-transparent.dim_200x200.png"
               alt="KopdeGoa logo – wine and liquor brand"
               className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
             />

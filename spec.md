@@ -1,11 +1,9 @@
 # Specification
 
 ## Summary
-**Goal:** Remove the dark square/rectangular box background from the KopdeGoa logo and update all logo usages across the app so the circular badge renders cleanly on any background.
+**Goal:** Preserve the KopdeGoa logo exactly as it currently appears across all components — no visual changes.
 
 **Planned changes:**
-- Generate a new logo image with a fully transparent background (no dark square or rectangular box)
-- Update logo references in the Header, Hero, and Footer to use the new transparent-background logo
-- Ensure the circular badge shape, red border, yellow glow, and beer mug illustration remain intact
+- Ensure no modifications are made to logo size, styling, transparency, positioning, or wrapper elements in the Header, Hero, and Footer components.
 
-**User-visible outcome:** The KopdeGoa circular badge logo appears cleanly against the Header, Hero, and Footer backgrounds with no dark square or rectangular box visible anywhere in the app.
+**User-visible outcome:** The KopdeGoa logo continues to render identically to its current approved state in the Header, Hero, and Footer.

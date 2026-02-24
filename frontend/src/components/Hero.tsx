@@ -31,7 +31,7 @@ export function Hero() {
           {/* Logo */}
           <div className="flex justify-center mb-6">
             <img
-              src="/assets/generated/kopdeGoa-logo.dim_300x300.png"
+              src="/assets/generated/kopde-goa-main-logo-transparent.dim_200x200.png"
               alt="KopdeGoa logo – wine and liquor brand"
               className="h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 object-contain drop-shadow-2xl animate-in zoom-in duration-700"
             />

@@ -16,7 +16,7 @@ export function Footer() {
           {/* Logo and Brand */}
           <div className="flex items-center gap-3">
             <img
-              src="/assets/generated/kopdeGoa-logo.dim_300x300.png"
+              src="/assets/generated/kopde-goa-logo-transparent.dim_200x200.png"
               alt="KopdeGoa Logo"
               className="h-10 w-10 object-contain"
             />
