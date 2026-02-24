@@ -1,0 +1,34 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Remove outer box/square background from logo image",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Update all logo usages across the app so the logo displays without any surrounding dark square/box background",
+      "acceptanceCriteria": [
+        "The dark square/rectangular box that frames the circular KopdeGoa logo badge is no longer visible anywhere in the app.",
+        "The circular logo badge (beer mug with 'KOP DE GOA' text) renders cleanly against the Header, Hero, and Footer backgrounds.",
+        "No white or dark rectangular bounding box appears around the logo in any section or screen size.",
+        "The logo retains its circular badge shape with the red border, yellow glow, and beer mug illustration intact."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Update the logo image reference to use the newly generated transparent logo at frontend/public/assets/generated/kopdeGoa-logo.dim_300x300.png. Remove any background styling (dark boxes, squares, or containers) from the logo img element or its wrapper. Ensure the circular badge logo renders directly against the header background with no rectangular frame."
+        },
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "modify",
+          "description": "Update the hero section logo image reference to use the newly generated transparent logo at frontend/public/assets/generated/kopdeGoa-logo.dim_300x300.png. Remove any background styling, dark squares, or rectangular containers around the logo. Ensure the circular badge displays cleanly against the hero background image with no visible box."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Update the footer logo image reference to use the newly generated transparent logo at frontend/public/assets/generated/kopdeGoa-logo.dim_300x300.png. Remove any background styling, dark boxes, or rectangular frames from the logo element or its container. Ensure the circular badge logo appears directly on the footer background without any square wrapper."
+        }
+      ]
+    }
+  ]
+}

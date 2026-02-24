@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Circular badge logo with 'KOP DE GOA' text arc at the top, a yellow/golden sun glow background, a dark navy blue beer mug with foam in the center, a red outer ring border, and a white inner ring — the entire image must have a fully transparent background with no square or rectangular box (kopdeGoa-logo.dim_300x300.png)",
+  "existing_features": [
+    {
+      "id": "feature-update-all-logo-usages-across-the-app-header-hero-footer-so-the-logo-is-displayed-without-any-surrounding-dark-square-box-background-the-circular-badge-should-appear-directly-on-whatever-background-sits-behind-it-with-no-rectangular-container-or-box-shape-visible",
+      "title": "Update all logo usages across the app (Header, Hero, Footer) so the logo is displayed without any surrounding dark square/box background — the circular badge should appear directly on whatever background sits behind it, with no rectangular container or box shape visible.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [],
+  "projectName": "Remove outer box/square background from logo image",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

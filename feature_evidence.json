@@ -1,0 +1,26 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-all-logo-usages-across-the-app-header-hero-footer-so-the-logo-is-displayed-without-any-surrounding-dark-square-box-background-the-circular-badge-should-appear-directly-on-whatever-background-sits-behind-it-with-no-rectangular-container-or-box-shape-visible",
+      "featureTitle": "Update all logo usages across the app (Header, Hero, Footer) so the logo is displayed without any surrounding dark square/box background — the circular badge should appear directly on whatever background sits behind it, with no rectangular container or box shape visible.",
+      "files": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/Header.tsx",
+        "frontend/src/components/Hero.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "blob-storage@4.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

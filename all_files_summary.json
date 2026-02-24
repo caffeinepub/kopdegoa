@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend entry point with no implemented methods.",
+  "feature_evidence.json": "Feature evidence report documenting that the logo box/background removal feature was implemented across Footer, Header, and Hero components.",
+  "frontend-file-summaries.txt": "JSON map of frontend source files to short human-readable summaries describing each component's purpose and notable details.",
+  "frontend/index.css": "Tailwind CSS entry file defining OKLCH-based CSS custom properties for light and dark color themes including background, foreground, primary, accent, and sidebar tokens.",
+  "frontend/index.html": "HTML shell for the KopdeGoa React app, mounting the app into a root div and loading the main TypeScript module.",
+  "frontend/src/App.tsx": "Root React component that composes the full KopdeGoa single-page website by rendering Header, Hero, About, Products, Contact, and Footer in order.",
+  "frontend/src/components/About.tsx": "About section component displaying KopdeGoa's brand story paragraphs and a four-value card grid (Quality, Authenticity, Trust, Community).",
+  "frontend/src/components/Contact.tsx": "Contact section with phone, location, and hours cards, social media links, and a validated request-changes form that opens a mailto link on submission.",
+  "frontend/src/components/Footer.tsx": "Footer component showing the transparent KopdeGoa logo, contact info, a Request Changes scroll link, dynamic copyright year with caffeine.ai attribution, and a drink-responsibly disclaimer.",
+  "frontend/src/components/Header.tsx": "Fixed navigation header with scroll-aware background, the transparent KopdeGoa logo PNG, desktop nav links, and a collapsible mobile menu.",
+  "frontend/src/components/Hero.tsx": "Full-screen hero section for KopdeGoa with a background image, brand logo, tagline, and two CTA buttons that smooth-scroll to 'products' and 'contact' sections.",
+  "frontend/src/components/Products.tsx": "Products section displaying a grid of seven liquor/wine category cards (Whisky, Wine, Vodka, etc.) with icons, descriptions, and a footer prompt to visit the store.",
+  "frontend/src/components/QrCodeSection.tsx": "Empty file with no content or exports.",
+  "frontend/src/hooks/useActor.ts": "Custom hook that creates and caches an ICP backend actor (anonymous or authenticated) using React Query, and invalidates dependent queries whenever the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an InternetIdentityProvider and useInternetIdentity hook for managing ICP Internet Identity authentication state (login, logout, identity persistence) via AuthClient.",
+  "frontend/src/hooks/useQueries.ts": "Intentionally empty placeholder file; no data-fetching queries are needed since the backend has no methods.",
+  "frontend/src/index.css": "Global Tailwind CSS stylesheet defining light/dark theme CSS custom properties (oklch color tokens) and utility classes for accent-red colors.",
+  "frontend/src/lib/qr.ts": "Empty file with no content or exports.",
+  "frontend/src/main.tsx": "React app entry point that mounts the app wrapped in QueryClientProvider and InternetIdentityProvider.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with oklch-based color tokens, custom border radii, accordion keyframes, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Project state metadata describing the current task: updating all logo usages (Header, Hero, Footer) to display the circular KopdeGoa badge without any surrounding dark square/box background."
+}
