@@ -1,52 +1,51 @@
-import { Wine, Droplet, Flame, Waves, Beer, Sparkles, GlassWater } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export function Products() {
   const categories = [
     {
-      icon: Flame,
+      emoji: '🥃',
       name: 'Whisky',
       description: 'Fine single malts, blends, and premium whisky selections',
       color: 'text-amber-600',
       bgColor: 'bg-amber-600/10',
     },
     {
-      icon: Wine,
+      emoji: '🍷',
       name: 'Wine',
       description: 'Premium red, white, and rosé wines from around the world',
       color: 'text-accent-red',
       bgColor: 'bg-accent-red/10',
     },
     {
-      icon: Droplet,
+      emoji: '🍸',
       name: 'Vodka',
       description: 'Crystal clear vodkas from classic to contemporary',
       color: 'text-blue-500',
       bgColor: 'bg-blue-500/10',
     },
     {
-      icon: Waves,
+      emoji: '🍹',
       name: 'Rum',
       description: 'Caribbean and local rums with rich, bold flavors',
       color: 'text-orange-600',
       bgColor: 'bg-orange-600/10',
     },
     {
-      icon: Beer,
+      emoji: '🍺',
       name: 'Beer',
       description: 'Craft beers, lagers, and ales for every taste',
       color: 'text-yellow-600',
       bgColor: 'bg-yellow-600/10',
     },
     {
-      icon: GlassWater,
+      emoji: '🧉',
       name: 'Flavored Drinks',
       description: 'Refreshing flavored beverages including Breezer and more',
       color: 'text-pink-500',
       bgColor: 'bg-pink-500/10',
     },
     {
-      icon: Sparkles,
+      emoji: '🏺',
       name: 'Heritage Spirits',
       description: 'Traditional feni, cashew liquor, and local specialties',
       color: 'text-primary',
@@ -78,9 +77,9 @@ export function Products() {
               >
                 <CardHeader className="space-y-4">
                   <div
-                    className={`inline-flex items-center justify-center w-16 h-16 rounded-full ${category.bgColor} ${category.color} transition-transform duration-300 group-hover:scale-110`}
+                    className={`inline-flex items-center justify-center w-16 h-16 rounded-full ${category.bgColor} transition-transform duration-300 group-hover:scale-110`}
                   >
-                    <category.icon className="h-8 w-8" />
+                    <span className="text-3xl leading-none select-none">{category.emoji}</span>
                   </div>
                   <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
                     {category.name}

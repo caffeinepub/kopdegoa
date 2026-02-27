@@ -57,35 +57,35 @@ export function Contact() {
 
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate fields
     const newErrors: { name?: string; contact?: string; message?: string } = {};
-    
+
     if (!name.trim()) {
       newErrors.name = 'Name is required';
     }
-    
+
     if (!contact.trim()) {
       newErrors.contact = 'Phone or Email is required';
     }
-    
+
     if (!message.trim()) {
       newErrors.message = 'Message is required';
     }
-    
+
     setErrors(newErrors);
-    
+
     // If there are errors, don't proceed
     if (Object.keys(newErrors).length > 0) {
       return;
     }
-    
+
     // Create mailto link
     const subject = encodeURIComponent('KopdeGoa website change request');
     const body = encodeURIComponent(
       `Name: ${name}\nPhone or Email: ${contact}\n\nMessage:\n${message}`
     );
-    
+
     window.location.href = `mailto:?subject=${subject}&body=${body}`;
   };
 

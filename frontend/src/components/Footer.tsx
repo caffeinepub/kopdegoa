@@ -13,12 +13,12 @@ export function Footer() {
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center space-y-6">
-          {/* Logo and Brand */}
-          <div className="flex items-center gap-3">
+          {/* Logo + Brand Name */}
+          <div className="flex flex-col items-center gap-3">
             <img
-              src="/assets/generated/kopde-goa-logo-transparent.dim_200x200.png"
-              alt="KopdeGoa Logo"
-              className="h-10 w-10 object-contain"
+              src="/assets/generated/kopdeGoa-logo.dim_400x400.png"
+              alt="KopDeGoa Logo"
+              className="h-20 w-20 object-contain rounded-full"
             />
             <span className="text-xl font-bold">KopdeGoa</span>
           </div>

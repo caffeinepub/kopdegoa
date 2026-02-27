@@ -1,32 +1,77 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Preserve current logo appearance unchanged",
+  "title": "Rebuild KopdeGoa Application",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Keep the KopdeGoa logo exactly as it currently appears in the Header, Hero, and Footer components — do not alter its size, styling, transparency, positioning, or any other visual properties",
+      "summary": "Rebuild and redeploy the existing KopdeGoa application preserving all frontend components (Header, Hero, About, Products, Contact, Footer, QrCodeSection) without modifications",
       "acceptanceCriteria": [
-        "The logo in the Header component renders identically to the current approved state",
-        "The logo in the Hero component renders identically to the current approved state",
-        "The logo in the Footer component renders identically to the current approved state",
-        "No changes are made to logo size, opacity, padding, margin, background, or wrapper elements"
+        "The app builds successfully without errors",
+        "All existing sections (Header, Hero, About, Products, Contact, Footer) render correctly",
+        "The Products section displays all liquor/wine category cards with their updated emojis",
+        "The app is deployed and accessible"
       ],
       "file_operations": [
         {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Verify all existing components (Header, Hero, About, Products, Contact, Footer) are properly imported and rendered in the correct order to ensure the app layout is preserved during rebuild"
+        },
+        {
           "path": "frontend/src/components/Header.tsx",
           "operation": "modify",
-          "description": "Verify the logo implementation in Header.tsx matches the approved state: using frontend/public/assets/generated/kopde-goa-logo-transparent.dim_200x200.png with h-8 w-auto sizing and no modifications to the existing img element or its wrapper. No changes should be made; this is a verification-only step to ensure the logo remains unchanged."
+          "description": "Verify the fixed navigation header with logo, brand name, desktop split nav links, and mobile hamburger menu renders correctly without any modifications"
         },
         {
           "path": "frontend/src/components/Hero.tsx",
           "operation": "modify",
-          "description": "Verify the logo implementation in Hero.tsx matches the approved state: using frontend/public/assets/generated/kopde-goa-logo-transparent.dim_200x200.png with h-32 w-auto sizing and mb-6 spacing. No changes should be made; this is a verification-only step to ensure the logo remains unchanged."
+          "description": "Verify the full-screen hero section with background image (frontend/public/assets/generated/hero-banner.dim_1200x600.jpg), brand name, tagline, and CTA buttons with smooth-scroll functionality is preserved"
+        },
+        {
+          "path": "frontend/src/components/About.tsx",
+          "operation": "modify",
+          "description": "Verify the About section displays KopdeGoa's brand story paragraphs and the four-value card grid (Quality, Authenticity, Trust, Community) with Lucide icons without changes"
+        },
+        {
+          "path": "frontend/src/components/Products.tsx",
+          "operation": "modify",
+          "description": "Verify the Products section displays all liquor/wine category cards (Whisky, Wine, Vodka, Rum, Beer, Flavored Drinks, Heritage Spirits) with their updated emojis, descriptions, and hover animations exactly as currently implemented"
+        },
+        {
+          "path": "frontend/src/components/Contact.tsx",
+          "operation": "modify",
+          "description": "Verify the Contact section with phone, location, hours cards, social media links, and the validated request-changes form with mailto functionality renders correctly"
         },
         {
           "path": "frontend/src/components/Footer.tsx",
           "operation": "modify",
-          "description": "Verify the logo implementation in Footer.tsx matches the approved state: using frontend/public/assets/generated/kopde-goa-logo-transparent.dim_200x200.png with h-12 w-auto sizing. No changes should be made; this is a verification-only step to ensure the logo remains unchanged."
+          "description": "Verify the Footer displays the KopdeGoa logo (frontend/public/assets/generated/kopde-goa-logo-transparent.dim_200x200.png or similar), brand name, contact info, Request Changes scroll link, dynamic copyright year, and caffeine.ai attribution without modifications"
+        },
+        {
+          "path": "frontend/src/components/QrCodeSection.tsx",
+          "operation": "modify",
+          "description": "Verify the QrCodeSection component file is preserved in its current empty state as required by the rebuild"
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Verify global CSS with Tailwind base/components/utilities, OKLCH-based CSS custom properties for light and dark themes, and accent-red utility classes are preserved exactly as is"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Verify Tailwind configuration with OKLCH-based color tokens, custom border radii, accordion keyframes, and plugins (typography, container queries, animations) is preserved without changes"
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Verify the HTML shell for KopdeGoa React app with root div mount point and main TypeScript module loader is preserved"
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Verify the application entry point mounting React app wrapped in QueryClientProvider and InternetIdentityProvider is preserved exactly as is"
         }
       ]
     }

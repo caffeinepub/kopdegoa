@@ -1,13 +1,15 @@
 {
-  "frontend/src/App.tsx": "Main application component that renders the complete KopdeGoa website with Header, Hero, About, Products, Contact, and Footer sections.",
-  "frontend/src/components/Header.tsx": "Fixed navigation header now using the transparent PNG logo (`kopde-goa-logo-transparent.dim_200x200.png`) to eliminate any rectangular box appearance, with nav links for Home, About, Products, and Contact.",
-  "frontend/src/components/Hero.tsx": "Full-screen hero section now using the transparent main logo PNG (`kopde-goa-main-logo-transparent.dim_200x200.png`) to eliminate any rectangular box, with background image, tagline, and CTA buttons.",
-  "frontend/src/components/About.tsx": "About section telling KopdeGoa's brand story with emphasis on the four pillars (Quality, Authenticity, Trust, Community) displayed in a card grid, with Community description set to \"A community rooted in culture, tradition, and its people.\" and all Goa references removed from story paragraphs.",
-  "frontend/src/components/Products.tsx": "Products section displaying seven beverage categories with Whisky first, followed by Wine, Vodka, Rum, Beer, a new Flavored Drinks category (mentioning Breezer) using GlassWater icon, and Heritage Spirits (renamed from Goan Specialties) in an interactive card grid with icons and descriptions.",
-  "frontend/src/components/Contact.tsx": "Contact section with phone, location, hours, social media links, and request changes form; QR code section removed as it now appears in the Hero area.",
-  "frontend/src/components/Footer.tsx": "Footer component now using the transparent PNG logo (`kopde-goa-logo-transparent.dim_200x200.png`) to eliminate any rectangular box, with contact information, Request Changes link, dynamic copyright year, and caffeine.ai attribution.",
-  "frontend/src/index.css": "Global styles with OKLCH color system featuring deep blue primary, rich red accent colors for both light and dark modes, plus custom utility classes.",
+  "frontend/src/App.tsx": "Main application component that renders the KopdeGoa website with Header, Hero, About, Products, Contact, and Footer sections in order.",
+  "frontend/src/components/Header.tsx": "Fixed navigation header with centered logo and brand name, split desktop nav links (Home/About left, Products/Contact right), and a mobile hamburger menu with smooth-scroll functionality.",
+  "frontend/src/components/Hero.tsx": "Full-screen hero section with background image overlay, KopdeGoa brand name heading, tagline \"authentic liquor & wine from the heart of goa\", subtitle, and CTA buttons for Explore Collection and Visit Store.",
+  "frontend/src/components/About.tsx": "About section with KopdeGoa brand story paragraphs and a four-value card grid (Quality, Authenticity, Trust, Community) with Lucide icons.",
+  "frontend/src/components/Products.tsx": "Products section displaying seven beverage categories (Whisky, Wine, Vodka, Rum, Beer, Flavored Drinks, Heritage Spirits) with expressive emojis in an interactive card grid with hover animations.",
+  "frontend/src/components/Contact.tsx": "Contact section with phone, location, and hours cards, social media links (Facebook, Instagram), and a validated request-changes form with mailto functionality.",
+  "frontend/src/components/Footer.tsx": "Footer with KopdeGoa circular logo, brand name, contact info (location, hours, phone), Request Changes scroll link, dynamic copyright year, and caffeine.ai attribution.",
+  "frontend/src/index.css": "Global styles with Tailwind directives, OKLCH-based CSS custom properties for light and dark themes (deep blue primary, rich red accent), and custom utility classes for accent-red color variants.",
   "frontend/src/hooks/useQueries.ts": "Empty placeholder file as the backend has no methods and the website is static with no data fetching requirements.",
   "frontend/src/lib/qr.ts": "Lightweight QR code generator that creates scannable SVG QR codes for URLs using alphanumeric encoding with error correction and proper quiet zones.",
-  "frontend/src/components/QrCodeSection.tsx": "QR code display component with explicit \"QR Code - Quick Access\" title, responsive sizing with max-width constraints, and clear English instructions that the code opens the Contact section."
+  "frontend/src/components/QrCodeSection.tsx": "Empty module placeholder file.",
+  "frontend/src/components/Services.tsx": "New Services section component displaying four service offerings (Home Delivery, Bulk & Event Orders, Expert Recommendations, Gift Packaging) in a responsive card grid that matches the About section's visual style with circular icon badges, bold titles, and descriptions.",
+  "frontend/tailwind.config.js": "Tailwind configuration with OKLCH-based color tokens, custom border radii, accordion keyframes/animations, and typography/container-queries/animate plugins."
 }

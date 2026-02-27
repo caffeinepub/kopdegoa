@@ -1,4 +1,28 @@
 {
   "kind": "feature_evidence_report",
-  "features": []
+  "features": [
+    {
+      "featureId": "feature-rebuild-and-redeploy-the-existing-kopdegoa-application-in-its-current-state-preserving-all-existing-frontend-components-header-hero-about-products-contact-footer-qrcodesection-and-backend-code-without-any-modifications",
+      "featureTitle": "Rebuild and redeploy the existing KopdeGoa application in its current state, preserving all existing frontend components (Header, Hero, About, Products, Contact, Footer, QrCodeSection) and backend code without any modifications.",
+      "files": [
+        "frontend/src/components/Contact.tsx",
+        "frontend/src/components/QrCodeSection.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "blob-storage@4.0.0",
+        "github-export-icp-cli@1.0.0",
+        "qr-code@1.0.0",
+        "camera@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
 }

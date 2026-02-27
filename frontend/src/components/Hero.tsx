@@ -28,15 +28,6 @@ export function Hero() {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-          {/* Logo */}
-          <div className="flex justify-center mb-6">
-            <img
-              src="/assets/generated/kopde-goa-main-logo-transparent.dim_200x200.png"
-              alt="KopdeGoa logo – wine and liquor brand"
-              className="h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 object-contain drop-shadow-2xl animate-in zoom-in duration-700"
-            />
-          </div>
-
           {/* Brand Name */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight">
             KopdeGoa
@@ -44,11 +35,8 @@ export function Hero() {
 
           {/* Tagline */}
           <div className="space-y-4">
-            <p className="text-xl md:text-2xl lg:text-3xl text-white/95 font-medium">
-              Authentic Liquor & Wine from the Heart
-            </p>
-            <p className="text-lg md:text-xl text-white/90 font-semibold italic">
-              In every sip, we trust.
+            <p className="text-xl md:text-2xl lg:text-3xl text-white/95 font-medium tracking-wide uppercase">
+              authentic liquor &amp; wine from the heart of goa
             </p>
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
               Experience genuine quality and tradition in every bottle

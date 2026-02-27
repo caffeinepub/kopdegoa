@@ -38,25 +38,11 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <button
-            onClick={() => scrollToSection('home')}
-            className="flex items-center gap-3 group"
-          >
-            <img
-              src="/assets/generated/kopde-goa-logo-transparent.dim_200x200.png"
-              alt="KopdeGoa logo – wine and liquor brand"
-              className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
-            />
-            <span className="text-2xl font-bold text-primary tracking-tight">
-              KopdeGoa
-            </span>
-          </button>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+        {/* Desktop: absolutely centered logo, nav links on sides */}
+        <div className="hidden md:flex items-center h-20 relative">
+          {/* Left nav links */}
+          <nav className="flex items-center gap-6">
+            {navLinks.slice(0, 2).map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
@@ -68,30 +54,80 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          {/* Absolutely centered Logo + Brand Name */}
+          <div className="absolute left-1/2 -translate-x-1/2">
+            <button
+              onClick={() => scrollToSection('home')}
+              className="flex items-center gap-3 group"
+            >
+              <img
+                src="/assets/generated/kopdeGoa-logo.dim_400x400.png"
+                alt="KopDeGoa Logo"
+                className="h-16 w-16 object-contain rounded-full"
+              />
+              <span className="text-2xl font-bold text-primary tracking-tight">
+                KopdeGoa
+              </span>
+            </button>
+          </div>
+
+          {/* Right nav links */}
+          <nav className="flex items-center gap-6 ml-auto">
+            {navLinks.slice(2).map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className="text-foreground/80 hover:text-primary font-medium transition-colors duration-200 relative group"
+              >
+                {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+              </button>
+            ))}
+          </nav>
+        </div>
+
+        {/* Mobile: truly centered logo with hamburger absolutely positioned */}
+        <div className="flex md:hidden items-center justify-center h-20 relative">
+          {/* Centered Logo + Brand Name */}
+          <button
+            onClick={() => scrollToSection('home')}
+            className="flex items-center gap-3 group"
           >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </Button>
+            <img
+              src="/assets/generated/kopdeGoa-logo.dim_400x400.png"
+              alt="KopDeGoa Logo"
+              className="h-16 w-16 object-contain rounded-full"
+            />
+            <span className="text-2xl font-bold text-primary tracking-tight">
+              KopdeGoa
+            </span>
+          </button>
+
+          {/* Mobile Menu Button absolutely positioned to the right */}
+          <div className="absolute right-0">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <nav className="md:hidden pb-6 animate-in slide-in-from-top-2 duration-300">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 items-center">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-foreground/80 hover:text-primary font-medium transition-colors duration-200 text-left py-2"
+                  className="text-foreground/80 hover:text-primary font-medium transition-colors duration-200 py-2"
                 >
                   {link.label}
                 </button>

@@ -1,35 +1,37 @@
 {
   "kind": "build_request",
-  "title": "Preserve current logo appearance unchanged",
+  "title": "Rebuild KopdeGoa app",
+  "projectName": "KopdeGoa",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Keep the KopdeGoa logo exactly as it currently appears in the Header, Hero, and Footer components — do not alter its size, styling, transparency, positioning, or any other visual properties.",
-      "target": "frontend",
+      "text": "Rebuild and redeploy the existing KopdeGoa application in its current state, preserving all existing frontend components (Header, Hero, About, Products, Contact, Footer, QrCodeSection) and backend code without any modifications.",
+      "target": "both",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-latest"
         ],
         "quotes": [
-          "keep the logo the same"
+          "rebuild"
         ]
       },
       "acceptanceCriteria": [
-        "The logo in the Header component renders identically to the current approved state.",
-        "The logo in the Hero component renders identically to the current approved state.",
-        "The logo in the Footer component renders identically to the current approved state.",
-        "No changes are made to logo size, opacity, padding, margin, background, or wrapper elements."
+        "The app builds successfully without errors",
+        "All existing sections (Header, Hero, About, Products, Contact, Footer) render correctly",
+        "The Products section displays all liquor/wine category cards with their updated emojis",
+        "The app is deployed and accessible"
       ]
     }
   ],
   "constraints": [
-    "Do not modify any logo-related styles, classes, or wrapper elements in Header.tsx, Hero.tsx, or Footer.tsx.",
-    "Do not replace or alter the logo image asset."
+    "Do not modify any existing functionality or content",
+    "Preserve all existing component code as-is"
   ],
   "nonGoals": [
-    "Changing any other visual or functional aspect of the site.",
-    "Modifying backend logic."
+    "Adding new features",
+    "Changing existing design or content",
+    "Modifying the backend"
   ],
   "imageRequirements": {
     "required": [],

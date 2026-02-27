@@ -5,18 +5,18 @@
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "existing_features": [],
-  "new_feature_requests": [
+  "existing_features": [
     {
-      "id": "AR-1",
-      "summary": "Keep the KopdeGoa logo exactly as it currently appears in the Header, Hero, and Footer components — do not alter its size, styling, transparency, positioning, or any other visual properties.",
+      "id": "feature-rebuild-and-redeploy-the-existing-kopdegoa-application-in-its-current-state-preserving-all-existing-frontend-components-header-hero-about-products-contact-footer-qrcodesection-and-backend-code-without-any-modifications",
+      "title": "Rebuild and redeploy the existing KopdeGoa application in its current state, preserving all existing frontend components (Header, Hero, About, Products, Contact, Footer, QrCodeSection) and backend code without any modifications.",
       "reqIds": [
         "REQ-1"
       ],
-      "status": "pending"
+      "version": 1
     }
   ],
-  "projectName": "Preserve current logo appearance unchanged",
+  "new_feature_requests": [],
+  "projectName": "KopdeGoa",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

@@ -1,9 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Preserve the KopdeGoa logo exactly as it currently appears across all components — no visual changes.
+**Goal:** Rebuild and redeploy the existing KopdeGoa application without any modifications.
 
 **Planned changes:**
-- Ensure no modifications are made to logo size, styling, transparency, positioning, or wrapper elements in the Header, Hero, and Footer components.
+- Rebuild the existing KopdeGoa app preserving all frontend components (Header, Hero, About, Products, Contact, Footer, QrCodeSection) exactly as-is
+- Preserve all existing backend code without modifications
 
-**User-visible outcome:** The KopdeGoa logo continues to render identically to its current approved state in the Header, Hero, and Footer.
+**User-visible outcome:** The KopdeGoa app is rebuilt and deployed, with all existing sections and functionality working as before.
