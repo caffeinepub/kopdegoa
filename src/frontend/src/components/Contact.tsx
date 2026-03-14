@@ -52,7 +52,7 @@ export function Contact() {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground font-display">
               Get in <span className="text-primary">Touch</span>
             </h2>
             <div className="w-24 h-1 bg-accent-red mx-auto rounded-full" />
@@ -80,6 +80,7 @@ export function Contact() {
                   {info.link ? (
                     <a
                       href={info.link}
+                      data-ocid="contact.phone.link"
                       className="text-2xl font-bold text-primary hover:underline block"
                     >
                       {info.content}
@@ -97,20 +98,25 @@ export function Contact() {
           {/* Social Media */}
           <Card className="bg-primary/5 border-primary/20">
             <CardContent className="p-8">
-              <div className="text-center space-y-6">
+              <div className="text-center space-y-3">
                 <h3 className="text-2xl font-bold text-foreground">
                   Connect With Us
                 </h3>
+                {/* Konkani phrase */}
+                <p className="text-accent-red italic text-base font-medium">
+                  "porot yeyat" — Come Visit Us 🌴
+                </p>
                 <p className="text-muted-foreground">
                   Follow us on social media for updates, offers, and more
                 </p>
-                <div className="flex justify-center gap-4">
+                <div className="flex justify-center gap-4 pt-2">
                   {socialLinks.map((social) => (
                     <Button
                       key={social.name}
                       variant="outline"
                       size="lg"
                       asChild
+                      data-ocid={`contact.${social.name.toLowerCase()}.link`}
                       className={`border-2 transition-all duration-300 ${social.color} ${social.bgColor}`}
                     >
                       <a

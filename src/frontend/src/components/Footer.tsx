@@ -12,8 +12,16 @@ export function Footer() {
               alt="KopDeGoa Logo"
               className="h-20 w-20 object-contain rounded-full"
             />
-            <span className="text-xl font-bold">KopdeGoa</span>
+            <span className="text-xl font-bold font-display">KopdeGoa</span>
           </div>
+
+          {/* Goan tagline */}
+          <p className="text-primary-foreground/80 italic text-sm tracking-wide text-center">
+            🌴 The Spirit of Goa, In Every Bottle · Proudly Rooted in Goa 🌴
+          </p>
+
+          {/* Goan divider */}
+          <div className="goan-divider h-px w-48 rounded-full opacity-50" />
 
           {/* Contact Information */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-sm text-primary-foreground/90">
@@ -31,6 +39,7 @@ export function Footer() {
               <Phone className="h-4 w-4" />
               <a
                 href="tel:9604456789"
+                data-ocid="footer.phone.link"
                 className="hover:text-white transition-colors"
               >
                 9604456789

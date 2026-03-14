@@ -25,29 +25,40 @@ export function Hero() {
         <div className="absolute inset-0 bg-[url('/assets/generated/heritage-pattern-bg.dim_800x400.jpg')] opacity-10 mix-blend-overlay" />
       </div>
 
+      {/* Goan decorative accent top */}
+      <div className="absolute top-0 left-0 right-0 h-1 goan-divider z-20" />
+
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
           {/* Brand Name */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight font-display">
             KopdeGoa
           </h1>
 
           {/* Tagline */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <p className="text-xl md:text-2xl lg:text-3xl text-white/95 font-medium tracking-wide uppercase">
               authentic liquor &amp; wine from the heart of goa
             </p>
-            <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
-              Experience genuine quality and tradition in every bottle
+            <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto italic">
+              Susegad living — In history every sip, we trust.
             </p>
           </div>
 
+          {/* Goan cultural badge */}
+          <div className="flex justify-center">
+            <span className="text-white/60 text-xs md:text-sm tracking-wider border border-white/20 px-3 py-1 rounded bg-white/5 backdrop-blur-sm">
+              🌴 Est. in the Spirit of Goa · Susegad Since Forever 🌴
+            </span>
+          </div>
+
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Button
               size="lg"
               onClick={() => scrollToSection("products")}
+              data-ocid="hero.primary_button"
               className="bg-white text-primary hover:bg-white/90 font-semibold text-lg px-8 py-6 rounded-lg shadow-2xl transition-all duration-300 hover:scale-105 group"
             >
               <Wine className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
@@ -57,6 +68,7 @@ export function Hero() {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection("contact")}
+              data-ocid="hero.secondary_button"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-semibold text-lg px-8 py-6 rounded-lg shadow-2xl transition-all duration-300 hover:scale-105 group"
             >
               <MapPin className="mr-2 h-5 w-5 group-hover:bounce transition-transform" />
