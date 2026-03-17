@@ -49,7 +49,7 @@ export function Products() {
       emoji: "🏺",
       name: "Feni & Local Spirits",
       description:
-        "Traditional Goan cashew feni, coconut feni, and locally crafted spirits — the soul of Goa in every pour",
+        "Traditional Goan cashew feni, coconut feni, locally crafted spirits, and heritage drinks — the soul of Goa in every pour",
       color: "text-primary",
       bgColor: "bg-primary/10",
     },

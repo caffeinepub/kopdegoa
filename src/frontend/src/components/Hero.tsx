@@ -21,7 +21,7 @@ export function Hero() {
           alt="KopdeGoa Hero"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-accent-red/80 to-primary/90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-[oklch(0.22_0.08_155)]/90" />
         <div className="absolute inset-0 bg-[url('/assets/generated/heritage-pattern-bg.dim_800x400.jpg')] opacity-10 mix-blend-overlay" />
       </div>
 

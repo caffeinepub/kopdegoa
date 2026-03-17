@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Clock, MapPin, Phone } from "lucide-react";
+import { Clock, MapPin, Navigation, Phone } from "lucide-react";
 import { SiFacebook, SiInstagram } from "react-icons/si";
 
 export function Contact() {
@@ -24,8 +24,8 @@ export function Contact() {
       icon: Clock,
       title: "Operating Hours",
       content: "Open daily from 9 AM – 10 PM",
-      color: "text-blue-600",
-      bgColor: "bg-blue-600/10",
+      color: "text-primary",
+      bgColor: "bg-primary/10",
     },
   ];
 
@@ -95,6 +95,48 @@ export function Contact() {
             ))}
           </div>
 
+          {/* Map */}
+          <Card className="border-2 border-primary/20 overflow-hidden mb-8">
+            <CardContent className="p-0">
+              <div className="relative">
+                <div className="bg-primary/5 px-6 py-4 border-b border-primary/10 flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <MapPin className="h-5 w-5 text-accent-red" />
+                    <span className="font-semibold text-foreground">
+                      Find Us — Paliem, Goa
+                    </span>
+                  </div>
+                  <Button
+                    asChild
+                    size="sm"
+                    data-ocid="contact.directions.button"
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center gap-2"
+                  >
+                    <a
+                      href="https://www.google.com/maps/search/KopdeGoa+Paliem+Goa"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Navigation className="h-4 w-4" />
+                      Get Directions
+                    </a>
+                  </Button>
+                </div>
+                <iframe
+                  data-ocid="contact.map_marker"
+                  title="KopdeGoa Location — Paliem, Goa"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.123456789!2d73.8278!3d15.5522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfba6b8cb8e7d7%3A0x1234567890abcdef!2sPaliem%2C%20Goa!5e0!3m2!1sen!2sin!4v1234567890"
+                  width="100%"
+                  height="380"
+                  style={{ border: 0, display: "block" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Social Media */}
           <Card className="bg-primary/5 border-primary/20">
             <CardContent className="p-8">
@@ -104,7 +146,7 @@ export function Contact() {
                 </h3>
                 {/* Konkani phrase */}
                 <p className="text-accent-red italic text-base font-medium">
-                  "porot yeyat" — Come Visit Us 🌴
+                  porot yeyat — Come Visit Us 🌴
                 </p>
                 <p className="text-muted-foreground">
                   Follow us on social media for updates, offers, and more
